@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hangman Game - PyScript</title>
-  <!-- PyScript -->
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <style>
@@ -29,73 +28,61 @@
 from js import document
 import random
 
-# Hangman words and ASCII stages
+# Inline word list and ASCII stages
 word_list = ["apple", "banana", "orange", "grape", "mango"]
+
 stages = [
 """
   +---+
-  |   |
       |
       |
       |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
       |
       |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
   |   |
       |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
  /|   |
       |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
  /|\  |
       |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
  /|\  |
  /    |
-      |
-=========
+     ===
 """,
 """
   +---+
-  |   |
   O   |
  /|\  |
  / \  |
-      |
-=========
+     ===
 """
 ]
+
 logo = """
  _
 | |
@@ -105,11 +92,11 @@ logo = """
 |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
                     __/ |
                    |___/    """
+
 # Game variables
 lives = 6
 chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
-display = ["_"] * word_length
+display = ["_"] * len(chosen_word)
 correct_letters = []
 
 output_area = document.getElementById("output")
@@ -135,7 +122,7 @@ def submit_guess(event):
             lives -= 1
             output_area.innerText += f"\n'{guess}' is not in the word. You lose a life."
 
-    # Show current state
+    # Update output
     output_area.innerText = logo + "\n\nWord to guess: " + " ".join(display) + f"\nLives: {lives}/6\n"
     output_area.innerText += stages[6 - lives]
 
@@ -147,7 +134,7 @@ def submit_guess(event):
         output_area.innerText += f"\n\n💀 You lost! The word was '{chosen_word}'."
         document.getElementById("submit").disabled = True
 
-# Attach event
+# Attach button event
 document.getElementById("submit").addEventListener("click", submit_guess)
 </py-script>
 
