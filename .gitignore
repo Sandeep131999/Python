@@ -14,4 +14,4 @@ venv/
 .venv/
 
 #Ignore twilio python code
-send_sms.py
+**/send_sms.py
