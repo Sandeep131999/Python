@@ -3,72 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 07 Python Demo</title>
+  <title>Hangman Game - PyScript</title>
   <!-- PyScript -->
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f0f4f8; }
+    h1 { color: #3f51b5; }
+    #output { white-space: pre-line; font-family: monospace; margin-top: 20px; }
+    input { font-size: 1rem; padding: 5px; width: 40px; text-align: center; }
+    button { font-size: 1rem; padding: 5px 15px; margin-left: 10px; cursor: pointer; }
+  </style>
 </head>
 <body>
 
-<h2>Hangman Game</h2>
+<h1>Hangman Game</h1>
+<p>Guess the letters of the word!</p>
+
+<input id="guess" type="text" maxlength="1" placeholder="a-z">
+<button id="submit">Guess</button>
+
+<pre id="output"></pre>
 
 <py-script>
+from js import document
 import random
-from hangman_words import word_list
-from hangman_art import stages, logo
 
+# Hangman words and ASCII stages
+word_list = ["apple", "banana", "orange", "grape", "mango"]
+stages = [
+"""
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+""",
+"""
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+"""
+]
+logo = """
+ _
+| |
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __
+| '_ \\ / _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
+                    __/ |
+                   |___/    """
+# Game variables
 lives = 6
-
-print(logo)
-
 chosen_word = random.choice(word_list)
-print(chosen_word)
-
-placeholder = ""
 word_length = len(chosen_word)
-for position in range(word_length):
-    placeholder += "_"
-print("Word to guess: " + placeholder)
-
-game_over = False
+display = ["_"] * word_length
 correct_letters = []
 
-while not game_over:
+output_area = document.getElementById("output")
+output_area.innerText = logo + "\n\nWord to guess: " + " ".join(display) + f"\nLives: {lives}/6\n"
 
-    print(f"****************************{lives}/6 LIVES LEFT****************************")
-    guess = input("Guess a letter: ").lower()
+# Function to handle guesses
+def submit_guess(event):
+    global lives
+    guess = document.getElementById("guess").value.lower()
+    if not guess.isalpha() or len(guess) != 1:
+        output_area.innerText += "\nPlease enter a single letter!"
+        return
 
     if guess in correct_letters:
-        print(f"You've already guessed {guess}")
-
-    display = ""
-
-    for letter in chosen_word:
-        if letter == guess:
-            display += letter
-            correct_letters.append(guess)
-        elif letter in correct_letters:
-            display += letter
+        output_area.innerText += f"\nYou've already guessed '{guess}'."
+    else:
+        correct_letters.append(guess)
+        if guess in chosen_word:
+            for i, letter in enumerate(chosen_word):
+                if letter == guess:
+                    display[i] = letter
         else:
-            display += "_"
+            lives -= 1
+            output_area.innerText += f"\n'{guess}' is not in the word. You lose a life."
 
-    print("Word to guess: " + display)
+    # Show current state
+    output_area.innerText = logo + "\n\nWord to guess: " + " ".join(display) + f"\nLives: {lives}/6\n"
+    output_area.innerText += stages[6 - lives]
 
-    if guess not in chosen_word:
-        lives -= 1
-        print(f"You guessed {guess}, that's not in the word. You lose a life.")
-
-        if lives == 0:
-            game_over = True
-
-
-            print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
-
+    # Check win/lose
     if "_" not in display:
-        game_over = True
-        print("****************************YOU WIN****************************")
+        output_area.innerText += "\n\n🎉 Congratulations! You won!"
+        document.getElementById("submit").disabled = True
+    elif lives == 0:
+        output_area.innerText += f"\n\n💀 You lost! The word was '{chosen_word}'."
+        document.getElementById("submit").disabled = True
 
-    print(stages[lives])
+# Attach event
+document.getElementById("submit").addEventListener("click", submit_guess)
 </py-script>
 
 </body>
