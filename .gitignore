@@ -12,6 +12,7 @@ __pycache__/
 # Ignore virtual environments
 venv/
 .venv/
+.env
 
 #Ignore twilio python code
 **/send_sms.py
