@@ -1,3 +1,25 @@
+Day 1 -> Simple python print statement
+Day 2 -> Data types, Mathematical operators, Calculator Project
+Day 3 -> Logic operator , modulo operator , Treasure Island Project
+Day 4 -> Random Module , Lists, Rock Paper Scissors Project
+Day 5 -> For loops, Highest score, Password Generator project
+Day 6 -> Functions
+Day 7 -> Hangman game
+Day 8 -> Caesar Cipher
+Day 10 -> Calculator project, DocString, Functions with outputs, Multiple return values
+Day 11 -> Black Jack
+Day 12 -> Block Scope, Global Constants , Global Vars, Number Guessing Project
+Day 13 -> Usage of debugger
+Day 14 -> Higher or Lower project
+Day 15 -> Coffe Machine Project
+Day 16 -> Arrange the data to pretty table
+Day 17 -> QuizModel
+
+
+Day 41 -> Web Scraping (Using SOUP)
+
+
+
 Technologies
 ------------
 Selenium
