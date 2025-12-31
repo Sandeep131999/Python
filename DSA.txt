@@ -1,0 +1,10 @@
+| Category                 | Topics & Patterns                                                             |
+| ------------------------ | ----------------------------------------------------------------------------- |
+| Arrays & Strings         | Prefix sum, two pointers, sliding window, subarrays, string matching          |
+| HashMap & Set            | Frequency count, top-K, duplicates, intersection, sliding window with hashmap |
+| Sorting & Heap           | Merge sort, quicksort, top-K elements, heaps for priority tasks               |
+| Linked Lists             | Reverse, merge, detect cycle                                                  |
+| Recursion & Backtracking | Tree traversal, combinations, subsets                                         |
+| Trees & Graphs           | BFS, DFS, graph representation, shortest path (basic)                         |
+| Time & Space Complexity  | Big O for every solution                                                      |
+------------------------------------------------------------------------------------------------------------

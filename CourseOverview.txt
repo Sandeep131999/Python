@@ -16,7 +16,7 @@ Day 16 -> Arrange the data to pretty table
 Day 17 -> QuizModel
 
 
-Day 41 -> Web Scraping (Using SOUP)
+Day 45 -> Web Scraping (Using SOUP)
 
 
 
@@ -36,23 +36,3 @@ Plotly
 Matplotlib
 
 
-#In these course I learned this
---------------------------------
-Python programming (core skill for AI/ML)
-Data handling & analysis (Pandas, NumPy)
-Basic machine learning (Scikit-learn)
-Visualization (Matplotlib, Plotly)
-Web automation & web apps (Selenium, Flask)
-
-Other things I need to learn
-----------------------------
-Deep Learning frameworks
-    PyTorch or TensorFlow are industry standards for AI/ML.
-Mathematics for AI
-    Linear algebra, calculus, probability, and statistics are essential to understand how models work.
-Model deployment skills
-    Knowing how to put AI models into production using Flask, FastAPI, or cloud platforms (AWS, GCP, Azure).
-Advanced machine learning / AI
-    Neural networks, NLP (natural language processing), computer vision, reinforcement learning depending on your target role.
-Projects / Portfolio
-    Recruiters care more about what you’ve built than just libraries you know. Real projects show practical skills.
