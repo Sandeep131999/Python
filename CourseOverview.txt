@@ -15,7 +15,7 @@ Day 15 -> Coffe Machine Project
 Day 16 -> Arrange the data to pretty table
 Day 17 -> QuizModel
 
-
+Day 39 -> String Related DSA Problems
 Day 45 -> Web Scraping (Using SOUP)
 
 

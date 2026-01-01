@@ -8,3 +8,211 @@
 | Trees & Graphs           | BFS, DFS, graph representation, shortest path (basic)                         |
 | Time & Space Complexity  | Big O for every solution                                                      |
 ------------------------------------------------------------------------------------------------------------
+
+# **Top 50 Coding Questions → DSA Concepts Covered**
+----------------------------------------------------
+1. Check if a string is a palindrome
+   → Strings, Two Pointers, Time Complexity
+
+2. Check if a number is a palindrome
+   → Math, Strings / Integers, Two Pointers
+
+3. Count all palindromic substrings
+   → Strings, Two Pointers / DP (basic)
+
+4. Longest palindromic substring
+   → Strings, Two Pointers / Sliding Window / DP
+
+5. Check if two strings are anagrams
+   → HashMap, Strings, Frequency Counting
+
+6. Reverse a string
+   → Strings, Two Pointers
+
+7. Reverse words in a sentence
+   → Strings, Arrays, Iteration
+
+8. Remove spaces / special characters from string
+   → Strings, Filtering, Iteration
+
+9. Check if a string is a permutation of a palindrome
+   → HashMap, Frequency Count, Strings
+
+10. First non-repeating character in a string
+    → HashMap, Strings, Single Pass Scan
+
+
+## **2. Number / Math (Q11–Q20)**
+
+11. Check if a year is a leap year
+    → Conditional Logic, Modulo
+
+12. Count leap years in a range
+    → Loops, Conditional Logic
+
+13. Check if a number is prime
+    → Math, Loops, Optimization
+
+14. Sum of digits of a number
+    → Math, Loops / Recursion
+
+15. Reverse an integer
+    → Math, Modulo, Loops
+
+16. Factorial of a number
+    → Loops / Recursion
+
+17. Fibonacci sequence (iterative)
+    → Dynamic Programming (basic), Loops
+
+18. Fibonacci sequence (recursive)
+    → Recursion, Stack
+
+19. Find GCD of two numbers
+    → Math, Euclidean Algorithm
+
+20. Find LCM of two numbers
+    → Math, GCD, Arithmetic
+
+---
+
+## **3. Array / List (Q21–Q35)**
+
+21. Find max element in an array
+    → Arrays, Linear Search
+
+22. Find min element in an array
+    → Arrays, Linear Search
+
+23. Find second largest / smallest element
+    → Arrays, Sorting / Tracking Variables
+
+24. Sum of array elements
+    → Arrays, Iteration
+
+25. Reverse an array
+    → Arrays, Two Pointers
+
+26. Rotate an array left/right
+    → Arrays, Modulo, Reversal Algorithm
+
+27. Remove duplicates from an array
+    → HashSet / HashMap, Arrays
+
+28. Find missing number in 1…N array
+    → Arrays, Math / XOR / HashMap
+
+29. Check if array is sorted
+    → Arrays, Iteration
+
+30. Merge two sorted arrays
+    → Arrays, Two Pointers
+
+31. Find intersection of two arrays
+    → HashSet / Two Pointers
+
+32. Find union of two arrays
+    → HashSet, Arrays
+
+33. Count frequency of each element
+    → HashMap, Arrays
+
+34. Two sum problem
+    → HashMap, Arrays
+
+35. Maximum subarray sum (Kadane’s Algorithm)
+    → Dynamic Programming, Arrays
+
+---
+
+## **4. Loops / Conditional / Patterns (Q36–Q42)**
+
+36. FizzBuzz problem
+    → Conditional Logic, Loops
+
+37. Print first N natural numbers
+    → Loops
+
+38. Sum of even numbers in a range
+    → Loops, Conditional Logic
+
+39. Sum of odd numbers in a range
+    → Loops, Conditional Logic
+
+40. Find factorial using loop
+    → Loops
+
+41. Print triangle / pyramid pattern
+    → Loops, Nested Loops
+
+42. Print multiplication table
+    → Loops, Nested Loops
+
+---
+
+## **5. Recursion / Backtracking (Q43–Q48)**
+
+43. Factorial using recursion
+    → Recursion, Stack
+
+44. Fibonacci using recursion
+    → Recursion, Overlapping Subproblems
+
+45. Sum of digits using recursion
+    → Recursion
+
+46. Reverse a string using recursion
+    → Recursion, Strings
+
+47. Generate all subsets of a set
+    → Backtracking, Recursion
+
+48. Generate all permutations of a string
+    → Backtracking, Recursion
+
+---
+
+## **6. Miscellaneous / Sliding Window (Q49–Q50)**
+
+49. Count vowels / consonants in a string
+    → Strings, Iteration
+
+50. Longest substring without repeating characters
+    → Sliding Window, HashMap, Strings
+
+---
+
+## **📌 Big Picture (What Interviewers See)**
+
+By preparing these **50 questions**, you cover:
+
+* ✅ Arrays
+* ✅ Strings
+* ✅ HashMap / HashSet
+* ✅ Two Pointers
+* ✅ Sliding Window
+* ✅ Recursion
+* ✅ Backtracking
+* ✅ Dynamic Programming (basic)
+* ✅ Mathematical algorithms
+* ✅ Time & Space Complexity thinking
+
+This is **more than enough DSA coverage** for:
+
+* **Amazon / Google AI roles**
+* **AI unicorn startups**
+* **AI Engineer / ML Engineer interviews**
+
+
+## **Final Truth (Important)**
+
+> If you can solve these 50 confidently **and explain the DSA concept behind each**,
+> you will **never fail a basic or mid-level DSA round** in AI/product interviews.
+
+If you want, next I can:
+
+* Map these **50 questions → your AI Resume Analyzer project**
+* Create **30-second interview explanation scripts**
+* Give you a **2-week DSA crash plan** using only these 50
+
+
