@@ -1,13 +1,15 @@
 import time
-from multiprocessing.managers import convert_to_error
-
+import os
+from dotenv import load_dotenv, dotenv_values
+# loading variables from .env file
+load_dotenv()
 import requests
 from datetime import datetime
 import smtplib
 
 from pandas.core.dtypes.common import is_scipy_sparse
-MY_EMAIL = "sandeepa13.1999@gmail.com"
-MY_PASS = "jlpw biow faqd nrte"
+MY_EMAIL = os.getenv("EMAIL_ADDRESS")
+MY_PASS = os.getenv("EMAIL_PASSWORD")
 MY_LAT = 51.507351 # Your latitude
 MY_LONG = -0.127758 # Your longitude
 
