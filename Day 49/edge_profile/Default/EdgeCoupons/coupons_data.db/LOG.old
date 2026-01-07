@@ -1,0 +1,6 @@
+2026/01/06-23:36:51.358 58b4 Reusing MANIFEST C:\Users\sande\OneDrive\Desktop\Python\Day 49\edge_profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/01/06-23:36:51.358 58b4 Recovering log #32
+2026/01/06-23:36:51.359 58b4 Reusing old log C:\Users\sande\OneDrive\Desktop\Python\Day 49\edge_profile\Default\EdgeCoupons/coupons_data.db/000032.log 
+2026/01/06-23:36:51.448 2e38 Level-0 table #37: started
+2026/01/06-23:36:51.452 2e38 Level-0 table #37: 681368 bytes OK
+2026/01/06-23:36:51.454 2e38 Delete type=0 #32

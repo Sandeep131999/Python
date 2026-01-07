@@ -58,10 +58,8 @@ Explanation:
     An empty string is considered a palindrome.
 
 """
-
-import string
-
 def clean_text(s):
+    """ Used isalnum builtin function to remove the special characters  """
     result = ""
     for ch in s:
         if ch.isalnum():
@@ -69,10 +67,11 @@ def clean_text(s):
     return result
 
 def check_palindrome(input_text):
+    """ Time Complexity   every builtin function  O(n) + O(n) + O(n) + O(n) + O(n) = O(n)
+        O(n) Linear time — execution time increases proportionally with the input size.  """
     # '','',it indicates delete string and string.punctuation it removes this !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
     # cleaned = input_text.translate(str.maketrans('', '', string.punctuation)).replace(" ", "").lower()
     cleaned = clean_text(input_text)
-
     rev = ""
     left, right = 0, len(cleaned) - 1
 
@@ -85,12 +84,10 @@ def check_palindrome(input_text):
         right -= 1
 
     print(f"{rev}  Palindrome")
+
 check_palindrome("A man, a plan, a canal: Panama")
 
-# Time Complexity
-    # every built in function  O(n) + O(n) + O(n) + O(n) + O(n) = O(n)
-    #O(n)
-    # Linear time — execution time increases proportionally with the input size.
+
 
 
 

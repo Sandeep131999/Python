@@ -17,13 +17,16 @@ Day 17 -> QuizModel
 
 Day 39 -> String Related DSA Problems
 Day 45 -> Web Scraping (Using SOUP)
-
+Day 46 -> Web scrapping the top 5 musics from the bill boards and add them to your spotify playlist
+Day 47 -> Web scrapping the amazon product price and if the price is below cost, send the email to them
+Day 48 -> Web scrapping advance using selenium webdriver
 
 
 Technologies
 ------------
-Selenium
+Selenium -> Libraries
 Flask
+PYTorch
 
 Libraries
 ----------
@@ -35,4 +38,7 @@ Scikit-learn
 Plotly
 Matplotlib
 
+
+Daily 3.5 Hours of code
+-----------------------
 
