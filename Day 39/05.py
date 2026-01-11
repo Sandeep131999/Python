@@ -1,5 +1,4 @@
-# Problem Statement:
-from xmlrpc.client import boolean
+# Problem Statement
 
 
 # Given two strings s and t, return true if t is an anagram of s, and return false otherwise.
@@ -25,11 +24,27 @@ from xmlrpc.client import boolean
 # 1 <= s.length, t.length <= 5 * 10^4
 # s and t consist of lowercase English letters
 
-def check_anagram(s:str,t:str)->bool:
-    enum_i = []
-    for i in s :
-        enum_i.append(i)
+def check_anagram(t:str,s:str)->bool:
 
+    if len(t) != len(s):
+        return False
+
+    freq = {}
+
+    for i in t:
+        freq[i] = freq.get(i, 0) + 1
+
+
+    for i in s :
+        if i not in freq:
+            return False
+
+        freq[i] -= 1
+        if freq[i] < 0:
+            return False
 
     return True
+
+
+print(check_anagram("sand","sand"))
 

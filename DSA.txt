@@ -11,10 +11,10 @@
 
 # **Top 50 Coding Questions → DSA Concepts Covered**
 ----------------------------------------------------
-1. Check if a string is a palindrome
+1. Check if a string is a palindrome   (If i reverse then its need to match )
    → Strings, Two Pointers, Time Complexity
 
-2. Check if a number is a palindrome
+2. Check if a number is a palindrome  (This also for number reverse)
    → Math, Strings / Integers, Two Pointers
 
 3. Count all palindromic substrings

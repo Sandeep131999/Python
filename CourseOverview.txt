@@ -19,16 +19,17 @@ Day 39 -> String Related DSA Problems
 Day 45 -> Web Scraping (Using SOUP)
 Day 46 -> Web scrapping the top 5 musics from the bill boards and add them to your spotify playlist
 Day 47 -> Web scrapping the amazon product price and if the price is below cost, send the email to them
-Day 48 -> Web scrapping advance using selenium webdriver
+Day 48 -> Web scrapping advance using selenium webdriver and cookie clicker project
 Day 49 -> GYM CLass Booking
-Day 50 -> Instagram bot
-Day 51 -> Data entry through WebScraping
+Day 50 -> Tinder bot
+Day 53 -> Data entry in Google form through Beautiful soup and Selenium webdriver kit
+Day 54 -> Math for AI
 
 
 Technologies
 ------------
 Selenium -> Libraries
-Flask
+Fast api ->
 PYTorch
 
 Libraries
@@ -45,3 +46,71 @@ Matplotlib
 Daily 3.5 Hours of code
 -----------------------
 
+
+Step 1: Learn the Foundation (Need to finish january month )
+
+    Before jumping to AI-specific courses, you need a strong base in Python and math.
+
+    🔹 What to learn:
+        Python Programming (basics + libraries for AI like NumPy, Pandas, Matplotlib)
+        Math for AI:
+        Linear algebra (vectors, matrices)
+        Probability & statistics
+        Basic calculus (derivatives for optimization)
+        Basic programming logic & data structures
+    🔹 Recommended beginner-friendly resources:
+        Free: Python for Everybody – Coursera
+        Free: Khan Academy – Linear Algebra & Probability
+        Free: fast.ai Practical Deep Learning for Coders
+        – after Python basics
+    ⚡ Goal: You should be comfortable with Python and understand math concepts used in AI.
+
+Step 2: Learn Core AI & Machine Learning (2–3 months)
+
+Once you have the foundation, start AI-specific concepts:
+
+🔹 What to learn:
+
+Machine Learning (ML) algorithms: Linear regression, decision trees, clustering
+
+Neural networks basics
+
+Data preprocessing and visualization
+
+Projects: Build simple models (predict prices, classify images)
+
+🔹 Recommended structured courses:
+
+Free beginner-friendly: Andrew Ng – Machine Learning, Coursera
+
+Paid with placement help: Great Learning AI/ML Program (mygreatlearning.com
+)
+
+Hands-on practice: Kaggle Courses
+
+⚡ Goal: Build your first ML models and understand how AI works.
+
+Step 3: Specialize & Build Real Projects (3–4 months)
+
+Now, you start focusing on AI developer skills:
+
+🔹 What to do:
+
+Deep Learning (CNNs for images, RNNs for sequences)
+
+Natural Language Processing (NLP)
+
+Generative AI (optional, if you want to work with models like GPT)
+
+Build real projects: chatbot, recommendation system, image classifier
+
+🔹 Recommended resources:
+
+Udacity Nanodegree – AI Programming with Python (project-focused, mentorship)
+
+Intellipaat – AI Developer Program (live projects + placement assistance)
+
+fast.ai Deep Learning Course
+ (free, highly practical)
+
+⚡ Goal: Have 2–3 projects in your portfolio — these are key for interviews.

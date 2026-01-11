@@ -1,0 +1,178 @@
+🔹 Your current situation
+3.2 years .NET experience (software engineering)
+Salary: 4.2 LPA
+Weak backend fundamentals (EF Core, Docker, APIs)
+
+
+Goal: AI Developer, remote, 8–10 LPA
+You’re willing to “sacrifice experience” if needed
+🔹 Your options
+Option 1 — Stay in .NET / Backend
+Upgrade skills (EF Core, ASP.NET Core, Docker, Cloud)
+Salary jump: 7–9 LPA
+Later add AI (applied AI on top of .NET)
+Safe, stable path, gradual transition
+Takes ~6–9 months to reach AI developer role
+Pros: Salary security, smooth growth, your experience counts
+Cons: Slower pivot to AI, you’re “stuck in backend” until AI skills mature
+
+Option 2 — Switch to pure ML / Deep Learning
+Learn Andrew Ng ML/DL, PyTorch, fast.ai
+Build ML/DL models, learn math
+Goal: Research / ML Engineer / Vision / NLP / RL
+Timeline: 6–12 months
+Salary (entry-level AI): 3–6 LPA (India)
+Pros: True ML knowledge, academic path, can do research later
+Cons: You lose your 3.2 yrs experience, lower pay initially, slower to land jobs
+
+Option 3 — Applied AI / Generative AI (Recommended)
+Build real apps using OpenAI / Azure AI / Claude
+Focus on applied AI (chatbots, RAG, document Q&A, AI automation)
+Portfolio = “1 year experience in AI”
+Timeline: 3–6 months
+Salary: 8–10 LPA (remote startups or product companies)
+Pros: Fastest path to AI developer, high salary, leverages some of your software skills, remote possible
+Cons: You’re “jumping domains”, but portfolio proves you’re capable
+🔹 My recommendation for you specifically
+
+
+Go for Option 3: Applied AI / Generative AI.
+Reasons:
+It matches your salary goal (8–10 LPA).
+You don’t care about losing old experience, so you can pivot fully.
+The market actively hires applied AI developers, even mid-level.
+You don’t need deep ML research / DL math → faster transition.
+Remote work is realistic with applied AI skills.
+
+🔹 The Clear Next Step
+Learn OpenAI / Azure AI / LLM APIs
+Build 3 portfolio projects: Chatbot, RAG with documents, AI automation
+Deploy online (Azure free tier / Render / GitHub)
+Create a resume as AI Developer
+Apply for remote AI developer roles, 8–10 LPA
+If you want, I can make a week-by-week 6-month roadmap that will take you from zero AI to ready-to-hire AI developer for remote roles at 8–10 LPA.
+
+
+Month 1 — Python + AI Basics
+You don’t need full ML.
+Learn:
+Python basics
+Lists, loops, functions
+Using APIs
+JSON
+Then:
+Call OpenAI API
+
+Build a simple chatbot
+
+Project 1:
+👉 Terminal ChatGPT clone
+
+Month 2 — LLMs + Prompt Engineering
+
+Learn:
+
+GPT-4 / GPT-4o / Azure OpenAI
+
+Prompt engineering
+
+System vs user messages
+
+Temperature, tokens
+
+Project 2:
+👉 Resume Analyzer AI
+Upload resume → AI gives feedback
+
+Month 3 — RAG (This is GOLD)
+
+This is where real money starts.
+
+Learn:
+
+Embeddings
+
+Vector databases
+
+FAISS / Chroma
+
+LangChain
+
+Project 3:
+👉 Chat with PDFs
+Upload 100 pages → ask questions
+
+This single project can get you hired.
+
+Month 4 — AI Automation
+
+Learn:
+
+How to connect AI to:
+
+Gmail
+
+Excel
+
+WhatsApp
+
+CRM
+
+APIs
+
+Tools:
+
+Python
+
+Zapier / Make
+
+OpenAI
+
+Project 4:
+👉 AI Customer Support Agent
+Reads FAQ + answers customers
+
+Month 5 — Web Apps + Deployment
+
+Learn:
+
+FastAPI
+
+Streamlit or React
+
+Hosting
+
+Deploy:
+
+Chatbot
+
+RAG app
+
+Automation agent
+
+Now you are not a student.
+You are an AI developer.
+
+Month 6 — Resume + Job Strategy
+
+You will apply as:
+
+Applied AI Developer / GenAI Engineer
+
+Your resume will show:
+
+4 real AI systems
+
+GitHub
+
+Live demos
+
+You apply for:
+
+Remote AI developer
+
+LLM engineer
+
+AI automation engineer
+
+Salary target: 8–12 LPA
