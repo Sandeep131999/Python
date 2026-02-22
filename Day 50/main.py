@@ -1,70 +1,150 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import ElementClickInterceptedException, NoSuchElementException
-from time import sleep
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.common.exceptions import TimeoutException
+from datetime import datetime
+import random
+import time
+import os
 
-FB_EMAIL =  ""
-FB_PASSWORD = ""
+# ================= CONFIG =================
+MAX_LIKES = 100
+MIN_DELAY = 2
+MAX_DELAY = 4
+LIKE_RATIO = 0.85
+# ==========================================
 
-driver = webdriver.Chrome()
+like_count = 0
+pass_count = 0
 
-driver.get("http://www.tinder.com")
 
-sleep(2)
-login_button = driver.find_element(By.XPATH, value='//*[text()="Log in"]')
-login_button.click()
+def log(msg):
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
 
-sleep(2)
-fb_login = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div[1]/div/div[3]/span/div[2]/button')
-fb_login.click()
 
-sleep(2)
-base_window = driver.window_handles[0]
-fb_login_window = driver.window_handles[1]
-driver.switch_to.window(fb_login_window)
-print(driver.title)
+# ---------- BROWSER SETUP ----------
+def create_driver():
+    from webdriver_manager.chrome import ChromeDriverManager
 
-email = driver.find_element(By.XPATH, value='//*[@id="email"]')
-password = driver.find_element(By.XPATH, value='//*[@id="pass"]')
-email.send_keys(FB_EMAIL)
-password.send_keys(FB_PASSWORD)
-password.send_keys(Keys.ENTER)
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    options.add_argument("--disable-notifications")
 
-driver.switch_to.window(base_window)
-print(driver.title)
+    driver = webdriver.Chrome(
+        service=ChromeService(ChromeDriverManager().install()),
+        options=options
+    )
 
-sleep(5)
+    return driver
 
-allow_location_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
-allow_location_button.click()
 
-notifications_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[2]')
-notifications_button.click()
+# ---------- HELPERS ----------
+def wait_for_buttons(driver):
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.TAG_NAME, "button"))
+    )
 
-cookies = driver.find_element(By.XPATH, value='//*[@id="content"]/div/div[2]/div/div/div[1]/button')
-cookies.click()
 
-#Tinder free tier only allows 100 "Likes" per day. If you have a premium account, feel free to change to a while loop.
-for n in range(100):
+def ensure_encounters(driver):
+    if "encounters" not in driver.current_url:
+        log("Navigating to Encounters...")
+        driver.get("https://badoo.com/encounters/")
+        WebDriverWait(driver, 10).until(
+            EC.url_contains("encounters")
+        )
 
-    #Add a 1 second delay between likes.
-    sleep(1)
 
+def dismiss_popups(driver):
     try:
-        print("called")
-        like_button = driver.find_element(By.XPATH, value=
-            '//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button')
-        like_button.click()
+        buttons = driver.find_elements(By.TAG_NAME, "button")
+        for btn in buttons:
+            text = (btn.text or "").lower()
+            if text in ["allow", "not now", "skip", "no thanks", "accept"]:
+                driver.execute_script("arguments[0].click();", btn)
+                return True
+    except:
+        pass
+    return False
 
-    #Catches the cases where there is a "Matched" pop-up in front of the "Like" button:
-    except ElementClickInterceptedException:
+
+def click_button(driver, keywords):
+    buttons = driver.find_elements(By.TAG_NAME, "button")
+
+    for btn in buttons:
         try:
-            match_popup = driver.find_element(By.CSS_SELECTOR, value=".itsAMatch a")
-            match_popup.click()
+            aria = (btn.get_attribute("aria-label") or "").lower()
+            cls = (btn.get_attribute("class") or "").lower()
 
-        #Catches the cases where the "Like" button has not yet loaded, so wait 2 seconds before retrying.
-        except NoSuchElementException:
-            sleep(2)
+            if any(k in aria or k in cls for k in keywords):
+                driver.execute_script("arguments[0].click();", btn)
+                return True
+        except:
+            continue
 
-driver.quit()
+    return False
+
+
+def click_like(driver):
+    return click_button(driver, ["like", "yes"])
+
+
+def click_pass(driver):
+    return click_button(driver, ["pass", "no", "skip"])
+
+
+# ---------- MAIN SWIPE LOOP ----------
+def swipe_loop(driver):
+    global like_count, pass_count
+
+    log("Bot started...")
+
+    while like_count < MAX_LIKES:
+        try:
+            ensure_encounters(driver)
+
+            wait_for_buttons(driver)
+
+            dismiss_popups(driver)
+
+            time.sleep(random.uniform(MIN_DELAY, MAX_DELAY))
+
+            if random.random() < LIKE_RATIO:
+                if click_like(driver):
+                    like_count += 1
+                    log(f"👍 Like #{like_count}")
+                else:
+                    log("Like failed")
+            else:
+                if click_pass(driver):
+                    pass_count += 1
+                    log(f"👎 Pass #{pass_count}")
+                else:
+                    log("Pass failed")
+
+        except TimeoutException:
+            log("Timeout - retrying...")
+        except Exception as e:
+            log(f"Error: {e}")
+            time.sleep(2)
+
+
+# ---------- MAIN ----------
+def main():
+    driver = create_driver()
+
+    driver.get("https://badoo.com/encounters/")
+
+    print("\nLogin manually, then press ENTER...")
+    input()
+
+    swipe_loop(driver)
+
+    log("Done!")
+    driver.quit()
+
+
+if __name__ == "__main__":
+    main()
