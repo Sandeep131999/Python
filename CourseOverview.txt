@@ -30,8 +30,7 @@ Day 48 -> Web scrapping advance using selenium webdriver and cookie clicker proj
 Day 49 -> GYM CLass Booking
 Day 50 -> Tinder bot
 Day 53 -> Data entry in Google form through Beautiful soup and Selenium webdriver kit
-Day 54 -> Linear Algebra
-Day 55 -> Currently Used For DSA
+Day 54 -> Decorator
 
 
 Technologies
